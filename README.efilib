@@ -1,31 +1,27 @@
-# vim: set fileencoding=utf-8
+#HackBGRT
 
-HackBGRT uses the gnu-efi library, which in turn is using the EFI Application
-Toolkit distributed by Intel at http://developer.intel.com/technology/efi
+HackBGRT旨在作为基于UEFI的Windows系统的引导徽标转换器。替换Win10开机动画，打造属于自己的个性开机界面
 
-This code is covered by the following agreement:
+##摘要
 
-Copyright (c) 1998-2000 Intel Corporation
+在基于UEFI的计算机上启动时，Windows可能会显示供应商定义的徽标，该徽标存储在UEFI固件的“引导图形资源表（BGRT）”中。永久更改映像通常非常困难，但可以使用自定义UEFI应用程序在引导期间覆盖它。 HackBGRT正是这样做的。
 
-Redistribution and use in source and binary forms, with or without modification, are permitted
-provided that the following conditions are met:
+##用法
 
-Redistributions of source code must retain the above copyright notice, this list of conditions and
-the following disclaimer.
+**重要：如果您搞砸了安装，您的系统可能无法启动！使用前用u盘创建一个pe。此软件不提供保修。使用风险由您自己承担。
 
-Redistributions in binary form must reproduce the above copyright notice, this list of conditions
-and the following disclaimer in the documentation and/or other materials provided with the
-distribution.
+*确保您的计算机正在使用UEFI启动。
+*确保禁用安全启动，除非您知道如何签署EFI应用程序。
 
-THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
-INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
-FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL INTEL BE
-LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-POSSIBILITY OF SUCH DAMAGE. THE EFI SPECIFICATION AND ALL OTHER INFORMATION
-ON THIS WEB SITE ARE PROVIDED "AS IS" WITH NO WARRANTIES, AND ARE SUBJECT
-TO CHANGE WITHOUT NOTICE.
+
+1：启动setup.exe
+2: 输入大写的i
+3: 安装程序将启动记事本以修改配置,弹出后直接关闭即可。
+4: 安装程序将启动画图软件打开Uefilogo文件夹内的splash.bmp，以确认你要把开机logo替换成splash.bmp。
+*务必使用BMP格式的图片作为开机logo。
+*务必将splash.bmp和本软件存储在同一文件夹内。
+（如果你很懒，可以用我已经绘制好的splash.bmp,当然用你自己的也可以，背景建议全黑，大小建议600×600像素）
+5：确认是你要替换成的开机logo后，关闭画图软件。
+6：替换成功！关闭软件。
+
+*如果想把开机动画还原，请打开软件输入大写R 
